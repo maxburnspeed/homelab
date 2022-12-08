@@ -1,5 +1,5 @@
 ---
-- hosts: slave1
+- hosts: pitainer
   become: true
 
   pre_tasks:
@@ -13,7 +13,7 @@
         update_cache: true
         cache_valid_time: 3600
       when:
-        - ansible_facts.os_family == "Rasbian"
+        - ansible_facts.os_family == "Debian"
 
   tasks:
     - name: Setup Docker.
