@@ -21,3 +21,6 @@
 
     - name: Set up Portainer.
       ansible.builtin.import_tasks: tasks/portainer.yml
+
+    - name: Set up Homebridge.
+      ansible.builtin.import_tasks: tasks/homebridge.yml
