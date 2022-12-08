@@ -6,7 +6,6 @@
         state: started
         recreate: yes
         restart_policy: always
-        network_mode: host
         published_ports:
           - "8581:8581"
         volumes:
