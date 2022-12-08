@@ -18,3 +18,7 @@
   tasks:
     - name: Setup Docker.
       ansible.builtin.import_tasks: tasks/docker.yml
+
+- name: Set up Pi Hole.
+      ansible.builtin.import_tasks: tasks/pi-hole.yml
+      when: pihole_enable
