@@ -13,3 +13,17 @@
         volumes:
           - /var/run/docker.sock:/var/run/docker.sock
           - portainer_data:/data
+ # FIREWALL SETUP
+    - name: Open Portainer port
+      ufw:
+        state: enabled
+        rule: allow
+        port: "9000"
+        proto: tcp
+
+    - name: Open SSH port
+      ufw:
+        state: enabled
+        rule: allow
+        port: "22"
+        proto: tcp
