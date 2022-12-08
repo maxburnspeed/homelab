@@ -10,5 +10,5 @@ domain_pihole: 'pihole'          # to access pihole via: http://pihole.home.loca
 # Pi-hole configuration.
 pihole_enable: true
 pihole_hostname: pihole
-pihole_timezone: America/Chicago
+pihole_timezone: America/New_York
 pihole_password: "change-this-password"
