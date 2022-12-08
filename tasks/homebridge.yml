@@ -1,0 +1,18 @@
+---
+    - name: Create homebridge container
+      docker_container:
+        name: homebridge
+        image: oznu/homebridge:latest
+        state: started
+        recreate: yes
+        restart_policy: always
+        network_mode: host
+        published_ports:
+          - "8581:8581"
+        volumes:
+          - ./volumes/homebridge:/homebridge
+        logging:
+          driver: json-file
+          options:
+            max-size: "10mb"
+            max-file: "1"
