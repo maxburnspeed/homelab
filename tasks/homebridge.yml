@@ -11,8 +11,3 @@
           - "8581:8581"
         volumes:
           - ./volumes/homebridge:/homebridge
-        logging:
-          driver: json-file
-          options:
-            max-size: "10mb"
-            max-file: "1"
